@@ -1,5 +1,84 @@
+```html
 <!doctype html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Workshop readiness</title></head>
-<body><main><h1>Student Project Tracker</h1><p>Readiness check passed. We will build the interface in Session 1.</p></main></body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Workshop Readiness - Student Project Tracker</title>
+</head>
+<body>
+    <header>
+        <h1>Student Project Tracker</h1>
+        <p>Plan your ideas, track your progress, and get ready to build amazing projects.</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#project-details">Project Details</a>
+        <a href="#readiness">Readiness Check</a>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>Welcome, Student!</h2>
+            <p>
+                This tracker helps you organise your project information
+                and prepare for the upcoming workshop.
+            </p>
+        </section>
+
+        <section id="project-details">
+            <h2>Project Information</h2>
+            <form>
+                <div>
+                    <label for="student-name">Student Name:</label>
+                    <input type="text" id="student-name"
+                           name="student-name" placeholder="Enter your name"
+                           required>
+                </div>
+
+                <div>
+                    <label for="project-name">Project Name:</label>
+                    <input type="text" id="project-name"
+                           name="project-name" placeholder="Enter project name"
+                           required>
+                </div>
+
+                <div>
+                    <label for="project-description">Project Description:</label>
+                    <textarea id="project-description"
+                              name="project-description"
+                              placeholder="Describe your project"
+                              rows="4" required></textarea>
+                </div>
+
+                <div>
+                    <label for="project-status">Project Status:</label>
+                    <select id="project-status" name="project-status">
+                        <option value="not-started">Not Started</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+
+                <button type="submit">Submit Project</button>
+            </form>
+        </section>
+
+        <section id="readiness">
+            <h2>Workshop Readiness</h2>
+            <p>Readiness check passed. We are ready to build the interface!</p>
+            <ul>
+                <li>HTML document structure is ready.</li>
+                <li>Project information fields are available.</li>
+                <li>Semantic HTML elements are included.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Student Project Tracker | Workshop Session 1</p>
+    </footer>
+</body>
 </html>
+```
