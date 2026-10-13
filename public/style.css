@@ -1,1 +1,216 @@
+```css
+/* ---------- Base styles ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    color: #1f2937;
+    background-color: #f3f6fb;
+    line-height: 1.6;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* ---------- Main layout ---------- */
+
+main {
+    width: min(100% - 32px, 900px);
+    margin: 0 auto;
+    padding: 32px 0 48px;
+}
+
+header {
+    margin-bottom: 28px;
+}
+
+h1 {
+    margin: 0 0 8px;
+    color: #173b6c;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.2;
+}
+
+header p {
+    margin: 0;
+    color: #4b5563;
+    font-size: 1.05rem;
+}
+
+h2 {
+    margin: 0 0 20px;
+    color: #173b6c;
+    font-size: 1.35rem;
+}
+
+/* ---------- Sections and cards ---------- */
+
+section {
+    margin-bottom: 24px;
+    padding: 24px;
+    background-color: #ffffff;
+    border: 1px solid #d8e0eb;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(23, 59, 108, 0.05);
+}
+
+/* ---------- Form controls ---------- */
+
+#project-form {
+    display: grid;
+    gap: 20px;
+}
+
+#project-form label {
+    display: block;
+    margin-bottom: 6px;
+    color: #27364b;
+    font-weight: 600;
+}
+
+#project-form input,
+#project-form select {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #9aa9bc;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #1f2937;
+    font: inherit;
+}
+
+#project-form input:focus,
+#project-form select:focus {
+    border-color: #1558a6;
+    outline: 3px solid #b9d8ff;
+    outline-offset: 2px;
+}
+
+/* ---------- Buttons and card actions ---------- */
+
+button {
+    min-height: 44px;
+    padding: 10px 18px;
+    border: 1px solid #1558a6;
+    border-radius: 6px;
+    background-color: #1558a6;
+    color: #ffffff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #10447f;
+    border-color: #10447f;
+}
+
+button:focus-visible {
+    outline: 3px solid #1558a6;
+    outline-offset: 3px;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+#project-form button {
+    justify-self: start;
+}
+
+#cancel-button {
+    background-color: #ffffff;
+    color: #374151;
+    border-color: #9aa9bc;
+}
+
+#cancel-button:hover {
+    background-color: #edf2f7;
+    border-color: #64748b;
+}
+
+#cancel-button[hidden] {
+    display: none;
+}
+
+/* Flex layout for actions inside future project cards */
+.card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ---------- Status message and project list ---------- */
+
+#message {
+    min-height: 1.6em;
+    margin: 16px 0 0;
+    color: #155b36;
+    overflow-wrap: anywhere;
+}
+
+#empty-state {
+    margin: 0;
+    color: #586579;
+}
+
+#project-list {
+    display: grid;
+    gap: 16px;
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+#project-list li {
+    padding: 18px;
+    border: 1px solid #d8e0eb;
+    border-radius: 8px;
+    background-color: #f9fbff;
+    overflow-wrap: anywhere;
+}
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 560px) {
+    main {
+        width: calc(100% - 24px);
+        padding-top: 24px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    h2 {
+        margin-bottom: 16px;
+    }
+
+    #project-form {
+        gap: 16px;
+    }
+
+    #project-form button {
+        width: 100%;
+    }
+
+    .card-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .card-actions button {
+        width: 100%;
+    }
+}
+```
 
